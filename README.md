@@ -72,3 +72,10 @@ after run above command, the program:
 ## RESULT
 
 ![img](./img/result.png)
+
+
+```neo4j
+MATCH (n:Asset {AssetName: 'California'})-[rel]-(b) RETURN rel, n, b
+```
+
+![img](./img/californai_result.png)
