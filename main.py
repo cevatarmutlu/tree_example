@@ -11,12 +11,12 @@ def create_nodes(df, conn_obj):
 
 if __name__ == '__main__':
   # read sheet asset from excel file
-  assets = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='assets').drop_duplicates()
+  assets = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='assets')[['AssetName', 'AssetType', 'AssetCluster']].drop_duplicates()
 
   # read sheet needs from excel file
-  needs = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='needs').drop_duplicates()
+  needs = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='needs')[['asset_name', 'need_value', 'group_id']].drop_duplicates()
   # read sheet offers from excel file
-  offers = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='offers').drop_duplicates()
+  offers = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='offers')[['asset_name', 'offer_value', 'group_id']].drop_duplicates()
   # use drop_duplicates because  excel file contains duplicate data
 
   # LEFT JOIN from sheet need to sheet asset and from sheet need to sheet offer 
