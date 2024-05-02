@@ -1,14 +1,15 @@
 ## INTRODUCTION
 
-This repo reads the given excel file and creates tree from data of the excel file. For creates tree, uses `Pandas` and for to store the tree uses `Neo4j`.
+This repo read the given excel file and create tree from data of the excel file. For create tree, use `Pandas` and for to store the tree use `Neo4j`.
+
 ## Used Technologies
 
 Tecnology | Information
 ----------|------------
-Python | Programming language
-Neo4j     | To create tree from given excel file
-Docker    | For Neo4j Enviroment
-Pandas    | For filter data and transform data
+Python | As a Programming language
+Pandas    | For to read from given excel file and transform it and filter it and to create the tree.
+Neo4j     | For to store the tree
+Docker    | As Neo4j environment
 
 ## INSTALL
 
