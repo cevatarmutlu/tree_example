@@ -15,7 +15,7 @@ Docker    | As Neo4j environment
 
 ### NEO4j
 
-This project use `Docker` as `Neo4j` environment. If you don't use Docker you can read this doc for installing neo4j. If you use Docker run following command at root directory of the project::
+This project use `Docker` as `Neo4j` environment. If you don't use `Docker` you can read this [doc]([doc](https://neo4j.com/docs/operations-manual/current/installation/)) for installing `Neo4j`. If you use `Docker` run following command at root directory of the project::
 
 ```
 docker compose up -d
