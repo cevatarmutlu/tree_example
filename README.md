@@ -15,20 +15,35 @@ Docker    | As Neo4j environment
 
 ### NEO4j
 
-This project use `Docker` as `Neo4j` environment. If you don't use `Docker` you can read this [doc](https://neo4j.com/docs/operations-manual/current/installation/). If you can use `Docker` run follow command at project root:
+This project use `Docker` as `Neo4j` environment. If you don't use Docker you can read this doc for installing neo4j. If you use Docker run following command at root directory of the project::
 
 ```
 docker compose up -d
 ```
 
 > username: `neo4j`, password: `test1234?_`
-> connect to `Neo4j browser` you can visit http://localhost:7474/
+> For connect to `Neo4j browser` you visit http://localhost:7474/
 
 
 ### Python
 
-Run follow command at root project:
+Run following command at root directory of the project:
 
 ```
 pip install -r requirenments.txt
 ```
+
+## How to run and how to work?
+
+Run following command at root directory of the project:
+
+```
+python main.py
+```
+
+after run above command the program:
+
+* reads the excel file with pandas
+* creates nodes from `assets` sheet from the excel file in Neo4j
+* find out matching `asset`s
+* creates relationship between matching `asset`'s in Neo4j
