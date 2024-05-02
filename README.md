@@ -1,7 +1,6 @@
 ## INTRODUCTION
 
-This repo reads the given excel file and creates a tree from the excel file. For creates a tree, uses `Neo4j`.
-
+This repo reads the given excel file and creates a tree from data of the excel file. For creates tree, uses `Pandas` and for to store the tree uses `Neo4j`.
 ## Used Technologies
 
 Tecnology | Information
