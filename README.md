@@ -35,15 +35,15 @@ pip install -r requirenments.txt
 
 ## How to run and how to work?
 
-For the run project run following command at root directory of the project:
+For run the project run following command at root directory of the project:
 
 ```
 python main.py
 ```
 
-after run above command the program:
+after run above command, the program:
 
 * reads the excel file with `pandas`
 * creates nodes from `assets` sheet from the excel file to Neo4j
 * find outs matching `asset`s
-* creates relationship between matching `asset`'s to Neo4j
+* creates relationship between `asset nodes` to Neo4j
