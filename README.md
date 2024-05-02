@@ -47,3 +47,5 @@ after run above command, the program:
 * creates `nodes` from `assets` sheet from the excel file to Neo4j
 * find outs matching `asset`s
 * creates relationship between `asset nodes` in Neo4j
+
+![img](./img/result.png)

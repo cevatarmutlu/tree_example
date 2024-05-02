@@ -29,7 +29,7 @@ if __name__ == '__main__':
   needs_group_ids = list(new_needs['group_id'].unique())
 
   # connect to neo4j
-  my_neo4j = MyNeo4j("bolt://localhost:7687", "neo4j", "deneme123_")
+  my_neo4j = MyNeo4j("bolt://localhost:7687", "neo4j", "test1234?_")
 
 
   # create nodes
