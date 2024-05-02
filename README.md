@@ -2,7 +2,18 @@
 
 This repo read the given excel file and create tree from data of the excel file. For create tree, use `Pandas` and for to store the tree use `Neo4j`.
 
-## Used Technologies
+* [INTRODUCTION](#introduction)
+* [USED TECHNOLOGIES](#used-technologies)
+* [WHY](#why)
+    * [Why Neo4j](#why-neo4j)
+    * [Why Pandas](#why-pandas)
+* [INSTALL](#install)
+    * [NEO4j](#neo4j)
+    * [Python](#python)
+* [HOW TO RUN AND HOW TO WORK?](#how-to-run-and-how-to-work)
+* [RESULT](#result)
+
+## USED TECHNOLOGIES
 
 Tecnology | Information
 ----------|------------
@@ -11,11 +22,11 @@ Pandas    | For to read from given excel file and transform it and filter it and
 Neo4j     | For to store the tree
 Docker    | As Neo4j environment
 
-## Why
+## WHY
 
 ### Why Neo4j
 
-Purpose of the project, create relationship between `assets`. For this purpose, most usefull database is a Graph based database. `Neo4j` is a Graph based database.
+Purpose of the project is that create relationship between `assets`. For this purpose, most usefull database is a Graph based database. `Neo4j` is a Graph based database.
 
 ### Why Pandas
 
@@ -43,7 +54,7 @@ Run following command at root directory of the project:
 pip install -r requirenments.txt
 ```
 
-## How to run and how to work?
+## HOW TO RUN AND HOW TO WORK?
 
 For run the project run following command at root directory of the project:
 
@@ -57,5 +68,7 @@ after run above command, the program:
 * creates `nodes` from `assets` sheet from the excel file to Neo4j
 * find outs matching `asset`s
 * creates relationship between `asset nodes` in Neo4j
+
+## RESULT
 
 ![img](./img/result.png)
