@@ -1,4 +1,4 @@
-## INTRODUCTION
+## INTRODUCTION
 
 This repo reads the given excel file and creates a tree from the excel file. For creates a tree, uses `Neo4j`.
 
