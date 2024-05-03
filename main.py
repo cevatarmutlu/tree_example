@@ -10,18 +10,18 @@ def create_nodes(df, conn_obj):
     )
 
 if __name__ == '__main__':
-  # read sheet asset from excel file
+  ### READ SECTION ###
   assets = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='assets')[['AssetName', 'AssetType', 'AssetCluster']].drop_duplicates()
-
-  # read sheet needs from excel file
   needs = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='needs')[['asset_name', 'need_value', 'group_id']].drop_duplicates()
-  # read sheet offers from excel file
   offers = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='offers')[['asset_name', 'offer_value', 'group_id']].drop_duplicates()
-  # use drop_duplicates because  excel file contains duplicate data
+  ### READ SECTION ###
 
-  # LEFT JOIN from sheet need to sheet asset and from sheet need to sheet offer 
+  
+  ### JOIN SECTION ###
   new_needs = pd.merge(needs, assets, how='left', left_on='asset_name', right_on='AssetName')
   new_offers = pd.merge(offers, assets, how='left', left_on='asset_name', right_on='AssetName')
+  ### JOIN SECTION ###
+
 
   # get unique group_id from sheet need becase there are two important thing in the case.
   # first thing is need_value or offer_value
