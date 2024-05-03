@@ -24,13 +24,13 @@ Docker    | As Neo4j environment
 
 ## WHY
 
-### Why Neo4j
+### Why Neo4j?
 
 Purpose of the project is that create relationship between `assets`. For this purpose, most usefull database is a Graph based database. `Neo4j` is a Graph based database.
 
-### Why Pandas
+### Why Pandas?
 
-`Pandas` can reads various file format such as `csv`, `parquet`, `excel` and `Pandas` transform the readed data to `Pandas DataFrame`. `Pandas` can make various operations on data such as filter, group by, order by, merge.
+`Pandas` can reads various file format such as `csv`, `parquet`, `excel` and `Pandas` can make various operations on data such as filter, group by, order by, join.
 
 ## INSTALL
 
