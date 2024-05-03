@@ -77,7 +77,7 @@ after run above command, the program:
 
 ### SPECIFIC ASSET
 
-Following command show relationships of specific`asset`.
+Following command show relationships of specific `asset`.
 
 ```neo4j
 MATCH (n:Asset {AssetName: 'California'})-[rel]-(b) RETURN rel, n, b
