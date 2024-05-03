@@ -23,10 +23,7 @@ if __name__ == '__main__':
   ### JOIN SECTION ###
 
 
-  # get unique group_id from sheet need becase there are two important thing in the case.
-  # first thing is need_value or offer_value
-  # second thing is group_id.
-  needs_group_ids = list(new_needs['group_id'].unique())
+  needs_group_ids = sorted(list(new_needs['group_id'].unique())) # [1, 2, 3, 4, 5]
 
   # connect to neo4j
   my_neo4j = MyNeo4j("bolt://localhost:7687", "neo4j", "test1234?_")
