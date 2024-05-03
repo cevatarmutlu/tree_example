@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
   ### FIND MATHING ASSETS ####
   df = pd.merge(new_needs, new_offers, how='inner', left_on='need_value', right_on='offer_value')
-  df.loc[df['group_id_x'] + 1 == df['group_id_y']][['AssetName_x', 'AssetType_x', 'AssetCluster_x', 'AssetName_y', 'AssetType_y', 'AssetCluster_y']].drop_duplicates(ignore_index=True, inplace=True)
+  df = df.loc[df['group_id_x'] + 1 == df['group_id_y']][['AssetName_x', 'AssetType_x', 'AssetCluster_x', 'AssetName_y', 'AssetType_y', 'AssetCluster_y']].drop_duplicates(ignore_index=True)
   ### FIND MATHING ASSETS ####
 
   # create relationships between asset nodes
