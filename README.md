@@ -71,8 +71,13 @@ after run above command, the program:
 
 ## RESULT
 
+### ALL RELATIONSHIPS
+
 ![img](./img/result.png)
 
+### SPECIFIC RELATIONSHIP
+
+Following command show relationships of specific`asset`.
 
 ```neo4j
 MATCH (n:Asset {AssetName: 'California'})-[rel]-(b) RETURN rel, n, b
