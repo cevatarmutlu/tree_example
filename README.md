@@ -67,7 +67,7 @@ after run above command, the program:
 * reads the excel file with `pandas`
 * creates `nodes` from `assets` sheet from the excel file to Neo4j
 * find outs matching `asset`s
-* creates relationship between `asset nodes` in Neo4j
+* creates relationships between `asset nodes` in Neo4j
 
 ## RESULT
 
