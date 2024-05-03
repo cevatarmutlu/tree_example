@@ -75,7 +75,7 @@ after run above command, the program:
 
 ![img](./img/result.png)
 
-### SPECIFIC RELATIONSHIP
+### SPECIFIC ASSET
 
 Following command show relationships of specific`asset`.
 
@@ -84,3 +84,10 @@ MATCH (n:Asset {AssetName: 'California'})-[rel]-(b) RETURN rel, n, b
 ```
 
 ![img](./img/californai_result.png)
+
+
+```
+MATCH (n:Asset {AssetName: 'Texas', AssetType: 'Middleware', AssetCluster: 'Edge'})-[rel]-(b) RETURN rel, n, b
+```
+
+![img](./img/texas_middleware_edge.png)
