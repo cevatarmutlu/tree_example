@@ -17,7 +17,8 @@ def create_relationships(df, conn_obj):
       needs_asset_cluster=row['AssetCluster_x'],
       offers_asset_name=row['AssetName_y'],
       offers_asset_type=row['AssetType_y'],
-      offers_asset_cluster=row['AssetCluster_y']
+      offers_asset_cluster=row['AssetCluster_y']#,
+      #relation_name=f"{row['need_value']}_{row['group_id_x']}_{row['group_id_y']}"
     )
 
 if __name__ == '__main__':

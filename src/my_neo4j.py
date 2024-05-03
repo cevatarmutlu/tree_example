@@ -21,14 +21,14 @@ class MyNeo4j:
             time=summary.result_available_after
         ))
     
-    def create_asset_relation(self, needs_asset_name, needs_asset_type, needs_asset_cluster, offers_asset_name, offers_asset_type, offers_asset_cluster):
+    def create_asset_relation(self, needs_asset_name, needs_asset_type, needs_asset_cluster, offers_asset_name, offers_asset_type, offers_asset_cluster, relation_name='RELATION'):
         summary = self.driver.execute_query(
             """
               MATCH (as1:Asset), (as2:Asset)
               WHERE 
                 as1.AssetName = $needs_asset_name AND as1.AssetType = $needs_asset_type AND as1.AssetCluster = $needs_asset_cluster AND 
                 as2.AssetName = $offers_asset_name AND as2.AssetType = $offers_asset_type AND as2.AssetCluster = $offers_asset_cluster
-              CREATE (as1)-[rel:RELATION]->(as2)""",
+              CREATE (as1)-[rel:$relation_name]->(as2)""".replace('$relation_name', relation_name),
             needs_asset_name=needs_asset_name,
             needs_asset_type=needs_asset_type,
             needs_asset_cluster=needs_asset_cluster,
