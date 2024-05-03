@@ -37,9 +37,13 @@ if __name__ == '__main__':
   new_offers = pd.merge(offers, assets, how='left', left_on='asset_name', right_on='AssetName')
   ### JOIN SECTION ###
 
+  ### FIND MATHING ASSETS ####
   df = pd.merge(new_needs, new_offers, how='inner', left_on='need_value', right_on='offer_value')
   df.loc[df['group_id_x'] + 1 == df['group_id_y']][['AssetName_x', 'AssetType_x', 'AssetCluster_x', 'AssetName_y', 'AssetType_y', 'AssetCluster_y']].drop_duplicates(ignore_index=True, inplace=True)
+  ### FIND MATHING ASSETS ####
 
+  # create relationships between asset nodes
   create_relationships(df, my_neo4j)
 
+  # close connection
   my_neo4j.close()
