@@ -23,14 +23,13 @@ if __name__ == '__main__':
   ### JOIN SECTION ###
 
 
-  # connect to neo4j
+  ### NEO4j SECTION ###
   my_neo4j = MyNeo4j("bolt://localhost:7687", "neo4j", "test1234?_")
-
-  # create nodes
   create_nodes(assets, my_neo4j)
+  ### NEO4j SECTION ###
 
+  ### FIND MATHING ASSETS SECTION ###
   needs_group_ids = sorted(list(new_needs['group_id'].unique())) # [1, 2, 3, 4, 5]
-
   matching_array = []
 
   for group_id in needs_group_ids:
@@ -49,7 +48,7 @@ if __name__ == '__main__':
         for _, row in matching_df.iterrows():
           #print('need: ', need_row['asset_name'], need_row['need_value'], need_row['group_id'], need_row['AssetType'], need_row['AssetCluster'], 'row: ', row['asset_name'], row['offer_value'], row['group_id'], row['AssetType'], row['AssetCluster'])
           matching_array.append([need_row['asset_name'], need_row['AssetType'], need_row['AssetCluster'], row['asset_name'], row['AssetType'], row['AssetCluster']])
-
+  ### FIND MATHING ASSETS SECTION ###
 
   df = pd.DataFrame(matching_array, columns=['need_asset_name', 'need_asset_type', 'need_asset_cluster', 'offer_asset_name', 'offer_asset_type', 'offer_asset_cluster'])
 
