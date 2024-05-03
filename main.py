@@ -23,14 +23,13 @@ if __name__ == '__main__':
   ### JOIN SECTION ###
 
 
-  needs_group_ids = sorted(list(new_needs['group_id'].unique())) # [1, 2, 3, 4, 5]
-
   # connect to neo4j
   my_neo4j = MyNeo4j("bolt://localhost:7687", "neo4j", "test1234?_")
 
-
   # create nodes
   create_nodes(assets, my_neo4j)
+
+  needs_group_ids = sorted(list(new_needs['group_id'].unique())) # [1, 2, 3, 4, 5]
 
   matching_array = []
 
