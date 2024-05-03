@@ -36,7 +36,7 @@ Purpose of the project is that create relationship between `assets`. For this pu
 
 ### NEO4j
 
-This project use `Docker` as `Neo4j` environment. If you don't use `Docker` you can read this [doc](https://neo4j.com/docs/operations-manual/current/installation/) for installing `Neo4j`. If you use `Docker` run following command at root directory of the project::
+This project use `Docker` as `Neo4j` environment. If you don't use `Docker` you read this [doc](https://neo4j.com/docs/operations-manual/current/installation/) for installing `Neo4j`. If you use `Docker` run following command at root directory of the project:
 
 ```
 docker compose up -d
