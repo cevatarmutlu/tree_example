@@ -17,26 +17,25 @@ def create_relationships(df, conn_obj):
       needs_asset_cluster=row['AssetCluster_x'],
       offers_asset_name=row['AssetName_y'],
       offers_asset_type=row['AssetType_y'],
-      offers_asset_cluster=row['AssetCluster_y']#,
-      #relation_name=f"{row['need_value']}_{row['group_id_x']}_{row['group_id_y']}"
+      offers_asset_cluster=row['AssetCluster_y']
     )
 
 if __name__ == '__main__':
-  ### READ SECTION ###
+  ### READ EXCEL ###
   assets = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='assets')[['AssetName', 'AssetType', 'AssetCluster']].drop_duplicates()
   needs = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='needs')[['asset_name', 'need_value', 'group_id']].drop_duplicates()
   offers = pd.read_excel('src/resources/CaseData.xlsx', sheet_name='offers')[['asset_name', 'offer_value', 'group_id']].drop_duplicates()
-  ### READ SECTION ###
+  ### READ EXCEL ###
 
-  ### NEO4j SECTION ###
+  ### NEO4j ###
   my_neo4j = MyNeo4j("bolt://localhost:7687", "neo4j", "test1234?_")
   create_nodes(assets, my_neo4j)
-  ### NEO4j SECTION ###
+  ### NEO4j ###
 
-  ### JOIN SECTION ###
+  ### SECTION ###
   new_needs = pd.merge(needs, assets, how='left', left_on='asset_name', right_on='AssetName')
   new_offers = pd.merge(offers, assets, how='left', left_on='asset_name', right_on='AssetName')
-  ### JOIN SECTION ###
+  ### SECTION ###
 
   ### FIND MATHING ASSETS ####
   df = pd.merge(new_needs, new_offers, how='inner', left_on='need_value', right_on='offer_value')
