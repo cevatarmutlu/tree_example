@@ -28,7 +28,7 @@ class MyNeo4j:
               WHERE 
                 as1.AssetName = $needs_asset_name AND as1.AssetType = $needs_asset_type AND as1.AssetCluster = $needs_asset_cluster AND 
                 as2.AssetName = $offers_asset_name AND as2.AssetType = $offers_asset_type AND as2.AssetCluster = $offers_asset_cluster
-              CREATE (as1)-[rel:RELATION]->(as2)""",
+              CREATE (as1)-[rel:relation]->(as2)""",
             needs_asset_name=needs_asset_name,
             needs_asset_type=needs_asset_type,
             needs_asset_cluster=needs_asset_cluster,
