@@ -4,9 +4,9 @@ This repo read the given excel file and create tree from data of the excel file.
 
 * [INTRODUCTION](#introduction)
 * [USED TECHNOLOGIES](#used-technologies)
-* [WHY](#why)
-    * [Why Neo4j](#why-neo4j)
-    * [Why Pandas](#why-pandas)
+* [WHY?](#why)
+    * [Why Neo4j?](#why-neo4j)
+    * [Why Pandas?](#why-pandas)
 * [INSTALL](#install)
     * [NEO4j](#neo4j)
     * [Python](#python)
@@ -22,7 +22,7 @@ Pandas    | For read from given excel file and transform it and filter it and cr
 Neo4j     | For store the tree
 Docker    | As Neo4j environment
 
-## WHY
+## WHY?
 
 ### Why Neo4j?
 
