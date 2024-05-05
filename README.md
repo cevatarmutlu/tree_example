@@ -73,6 +73,10 @@ after run above command, the program:
 
 ### ALL RELATIONSHIPS
 
+```
+MATCH (n) RETURN (n)
+```
+
 ![img](./img/result.png)
 
 ### SPECIFIC ASSET
